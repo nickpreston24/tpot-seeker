@@ -12,7 +12,7 @@ setupProject({
       <App />
     </React.StrictMode>
   ),
-  injectExtensionTo: ".root",
+  injectExtensionTo: "body",
   injectWebAppTo: "#root",
 });
 

@@ -3,7 +3,7 @@
 
 window.chrome.runtime.onInstalled.addListener(() => {
   console.log(
-    "'Create React Chrome Extension - TypeScript' installed/updated..."
+    "'TPOT Seeker' installed/updated..."
   );
 });
 

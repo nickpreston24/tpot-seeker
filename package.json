@@ -1,5 +1,5 @@
 {
-  "name": "create-react-chrome-extension-ts",
+  "name": "TPOT-Seeker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "cross-env": "^7.0.3",
     "filemanager-webpack-plugin": "3.0.0-beta.0",
     "react": "^17.0.1",
     "react-app-rewired": "2.1.6",
@@ -21,8 +22,8 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build:extension": "REACT_APP_BUILD_TARGET=extension react-app-rewired build",
-    "build:web-app": "REACT_APP_BUILD_TARGET=web-app react-app-rewired build",
+    "build:extension": "cross-env REACT_APP_BUILD_TARGET=extension react-app-rewired build",
+    "build:web-app": "cross-env REACT_APP_BUILD_TARGET=web-app react-app-rewired build",
     "test": "react-app-rewired test"
   },
   "eslintConfig": {

@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Create React Chrome Extension - TypeScript",
+  "name": "TPOT Seeker",
   "version": "0.1.0",
   "description": "A lightweight boilerplate for building a Chrome extension with React, TypeScript and Webpack.",
   "author": "Jakub Pixochi Kozak",

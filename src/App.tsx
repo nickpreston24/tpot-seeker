@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+import hello from './assets/hello-there.gif'
 import * as AssetsService from "./services/assets-service";
 
 function App() {
@@ -7,21 +6,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img
-          src={AssetsService.getResourceURL(logo)}
-          className="App-logo"
-          alt="logo"
+          src={AssetsService.getResourceURL(hello)}
+          alt="loading..."
         />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illum autem dolorem, facere amet a quod deleniti cum quis pariatur. Quaerat, odio eaque. Soluta consequuntur, sunt placeat odio quam aliquid!</h1>
       </header>
     </div>
   );
