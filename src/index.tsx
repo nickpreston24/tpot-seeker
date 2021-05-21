@@ -13,7 +13,7 @@ setupProject({
     </React.StrictMode>
   ),
   // injectExtensionTo: "body",
-  injectExtensionTo: ".search-input", //tpot's WP search bar
+  injectExtensionTo: ".widget-area", //tpot's WP search bar
   injectWebAppTo: "#root",
 });
 
