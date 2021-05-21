@@ -12,7 +12,8 @@ setupProject({
       <App />
     </React.StrictMode>
   ),
-  injectExtensionTo: "body",
+  // injectExtensionTo: "body",
+  injectExtensionTo: ".search-input", //tpot's WP search bar
   injectWebAppTo: "#root",
 });
 
