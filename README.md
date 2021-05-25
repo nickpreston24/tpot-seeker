@@ -5,10 +5,11 @@ ___Note, there may be others, but I like this one b/c it injects the app into pr
 
 ### Todos (Rebuilding the app)
 
-- [ ] Import `cross-env` and update package.json to set inline environment vars.
-- [ ] Attempt a pack [crx installer](http://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/external/chromium/chrome/common/extensions/docs/packaging.html) [packing an extension from unpacked location](https://www.addictivetips.com/web/how-to-export-an-installed-extension-chrome/)
-- [ ]
-- [ ] 
+- [x] Import `cross-env` and update package.json to set inline environment vars.
+- [x] Attempt a pack [crx installer](http://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/external/chromium/chrome/common/extensions/docs/packaging.html) [packing an extension from unpacked location](https://www.addictivetips.com/web/how-to-export-an-installed-extension-chrome/)
+- [x] Add a sample WordCloud
+- [x] Read any current page's html
+- [ ] Parse current page's html and weight repeated words.
 - [ ] Add Chakra-UI
 - [ ] Create custom TPOT Card.tsx with #600 red color borders
 - [ ] 
@@ -27,3 +28,6 @@ https://smartbear-cc.force.com/portal/KbArticleViewer?name=How-do-I-whitelist-an
 [Enable GPEdit.msc](https://www.itechtics.com/enable-gpedit-windows-10-home/)
 
 - There's a proper way to enable Chrome group policy in Windows 10 Home.  To do this, just download the Chrome Policy templates, extract, then copy the .admx and .adml files, both the `chrome` and `google` variants, from their respective `en-US` folders and paste them into `C:\Windows\PolicyDefinitions\` and `C:\Windows\PolicyDefinitions\en-US\` respectively.
+
+### Possibly helpful links
+https://www.ibenic.com/react-render-content-wp-rest-api/
