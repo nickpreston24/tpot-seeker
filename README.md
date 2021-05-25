@@ -1,3 +1,11 @@
+### Installation
+
+1. Download the .Zip file from the little green box.  Extract to any place you wish to load extensions from your computer.
+2. Open Chrome.  Navigate to `chrome://extensions`.  Make sure you have `Developer Mode` ON.
+3. Click on the `Load Unpacked Extension` button and follow the prompt.  You should be able to load the same folder you've just extracted.
+4. Navigate to any page on TPOT and observe the results.
+
+
 ### Orginal Chrome React Extension
 https://github.com/pixochi/create-react-chrome-extension-ts
 
@@ -12,9 +20,6 @@ ___Note, there may be others, but I like this one b/c it injects the app into pr
 - [ ] Parse current page's html and weight repeated words.
 - [ ] Add Chakra-UI
 - [ ] Create custom TPOT Card.tsx with #600 red color borders
-- [ ] 
-- [ ] 
-- [ ] 
 
 ### Links
 - [Extract existing Chrome Extensions to .crx files](http://crxextractor.com/)
