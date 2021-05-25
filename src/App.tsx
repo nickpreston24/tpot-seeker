@@ -6,7 +6,17 @@ import { isDev } from './environment';
 
 const countWords = require('count-words')
 const elementName = "entry-content"
-const articles = ['the', 'to', 'a', 'and', 'or', 'an', 'but', 'of', 'in', 'are', 'were', 'be', 'been']
+const articles = [
+  'that', 'the',
+  'to', 'a',
+  'and', 'or',
+  'an', 'but',
+  'of', 'in',
+  'are', 'so',
+  'were', 'be',
+  'been', 'what',
+  "don't", "didn't", "hasn't", "wouldn't", "couldn't"
+]
 
 function App() {
 

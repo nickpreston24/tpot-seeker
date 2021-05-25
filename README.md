@@ -17,6 +17,9 @@ ___Note, there may be others, but I like this one b/c it injects the app into pr
 - [x] Attempt a pack [crx installer](http://www.dre.vanderbilt.edu/~schmidt/android/android-4.0/external/chromium/chrome/common/extensions/docs/packaging.html) [packing an extension from unpacked location](https://www.addictivetips.com/web/how-to-export-an-installed-extension-chrome/)
 - [x] Add a sample WordCloud
 - [x] Read any current page's html
+- [ ] Make it so words like "didn't" or "don't" are countable and then exclude them as articles.
+- [ ] Make a small configuration icon (gear) and popover for configuring what words to exclude. Save to localStorage.  
+- [ ] Support exports and imports of localstorage.
 - [ ] Parse current page's html and weight repeated words.
 - [ ] Add Chakra-UI
 - [ ] Create custom TPOT Card.tsx with #600 red color borders
