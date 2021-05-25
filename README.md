@@ -5,6 +5,15 @@
 3. Click on the `Load Unpacked Extension` button and follow the prompt.  You should be able to load the same folder you've just extracted.
 4. Navigate to any page on TPOT and observe the results.
 
+### Ideas for Features
+
+1. Word Cloud texts link to a search [Done]
+2. Little Gear Icon for Settings panel:
+    a. Show border
+    b. Show words over x counts
+    c. Scriptures only mode
+    d. [Inspiration for Settings](https://github.com/chrisrzhou/wordcloud-generator/blob/main/src/components/app.js)
+3. Save Settings to localhost, export as xml or to an account.
 
 ### Orginal Chrome React Extension
 https://github.com/pixochi/create-react-chrome-extension-ts

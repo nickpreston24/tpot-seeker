@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactWordcloud from 'react-wordcloud';
 
-
 const getSearchURL = (searchTerm) => `https://www.thepathoftruth.com/?s=%22${searchTerm.trim().replace(' ', "+")}%22`
 const callbacks = {
     onWordClick: (e) => {
@@ -16,9 +15,22 @@ const callbacks = {
     getWordColor: _ => "#600",
     // getWordTooltip: word => `${word.text} (${word.value}) [${word.value > 50 ? "good" : "bad"}]`,
 }
+
 const options = {
-    rotations: 10,
+    rotations: undefined,
     rotationAngles: [-90, 0, 90],
+    // fontFamily: 'times new roman',
+    fontSizes: [14, 64],
+
+    spiral: 'archimedean',
+    scale: 'linear',
+    transitionDuration: 500,
+    padding: 1,
+
+    // Non-configurable
+    deterministic: true,
+    enableOptimizations: true,
+    enableTooltip: true,
 } as any
 
 export const WordCloud = ({ words }) => {
@@ -26,8 +38,8 @@ export const WordCloud = ({ words }) => {
         <div
             style={{
                 border: '2px #600 solid',
-                width: 200,
-                height: 200,
+                width: 300,
+                height: 300,
             }}
         >
             <ReactWordcloud

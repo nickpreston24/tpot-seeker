@@ -1,52 +1,50 @@
-// import hello from './assets/hello-there.gif'
-// import * as AssetsService from "./services/assets-service";
 import WordCloud from './components/WordCloud'
 import { useState, useEffect } from 'react';
 import { isDev } from './environment';
 
 const countWords = require('count-words')
 const elementName = "entry-content"
-const articles = [
+const blackListedWords = [
   'that', 'the',
   'to', 'a',
   'and', 'or',
   'an', 'but',
-  'of', 'in',
+  'of', 'in', 'is', 'it', 'i', 'for', 'you', 'us', 'we', 'not', 'your', 'our',
   'are', 'so',
-  'were', 'be',
+  'were', 'be', 'by', 'they',
   'been', 'what',
   "don't", "didn't", "hasn't", "wouldn't", "couldn't"
 ]
 
-function App() {
+const initialState = {
+  words: [
+    {
+      text: 'faith',
+      value: 64,
+    },
+    {
+      text: 'cults',
+      value: 45,
+    },
+    {
+      text: 'Jesus Christ',
+      value: 67,
+    },
+    {
+      text: 'Grace',
+      value: 52,
+    },
+  ]
+}
 
-  const initialState = {
-    words: [
-      {
-        text: 'faith',
-        value: 64,
-      },
-      {
-        text: 'cults',
-        value: 45,
-      },
-      {
-        text: 'Jesus Christ',
-        value: 67,
-      },
-      {
-        text: 'Grace',
-        value: 52,
-      },
-    ]
-  }
+function App() {
 
   const [state, setState] = useState(initialState)
 
   useEffect(() => {
 
-    let elements = document.getElementsByClassName(elementName)//[1]//.children;
-    console.log(`elements`, elements)
+    let elements = document.getElementsByClassName(elementName)
+
     let text = '';
     for (var i = 0; i < elements.length; i++) {
       text += elements[i].textContent + " ";
@@ -54,7 +52,7 @@ function App() {
 
     text = text.trim();
 
-    console.log(`text :>> `, text)
+    isDev() && console.log(`text :>> `, text)
 
     let totalWordCounts = countWords(text || "", true);
 
@@ -63,13 +61,14 @@ function App() {
         text: counts[0],
         value: counts[1]
       }))
-      .filter(word => articles.indexOf(word.text) < 0) as any[]
+      .filter(word =>
+        blackListedWords.indexOf(word.text) < 0
+        && word.value > 1
+        && !/d+/.test(word.value)
+      ) as any[]
 
     isDev() && console.log(`totalWordCounts`, totalWordCounts)
     isDev() && console.log(`wordWeights`, wordWeights)
-
-    // let noArticles = wordWeights.filter(word => articles.indexOf(word.text) < 0)
-    // console.log(`noArticles`, noArticles)
 
     setState({
       ...state,
@@ -79,6 +78,7 @@ function App() {
 
   return (
     <div className="App">
+      {isDev() && <Lorem />}
       {state?.words?.length ? <WordCloud {...state} /> : null}
     </div>
   );
@@ -105,11 +105,3 @@ const Lorem = () => {
     </div>
   )
 }
-
-
-{/* <header className="App-header">
-        <img
-          src={AssetsService.getResourceURL(hello)}
-          alt="loading..."
-        />
-      </header> */}
